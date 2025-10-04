@@ -32,9 +32,9 @@ async function createTables(db) {
 
         CREATE TABLE IF NOT EXISTS tasks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER NOT NULL UNIQUE,
-            title TEXT NOT NULL UNIQUE,
-            description TEXT NOT NULL UNIQUE,
+            user_id INTEGER NOT NULL,
+            title TEXT NOT NULL,
+            description TEXT NOT NULL,
             status TEXT NOT NULL,
             due_date DATETIME,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
