@@ -1,0 +1,29 @@
+.home-page-image{
+    width: 400px;
+    height: 400px;
+}
+.homepage-info{
+    text-align: center;
+    margin-left: 65px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 65px;
+    padding: 24px;
+    padding-left: 75px;
+}
+.home-page-heading{
+    font-size: 80px;
+    font-weight: bold;
+    color: darkturquoise;
+}
+.homepage-description{
+    color:#000000;
+    font-size: 25px;
+    font-weight: 500;
+    font-family:  Bree serif;
+}
+.homepage-text{
+    color: dimgrey;
+    font-size: 20px;
+    font-weight: 400;
+}

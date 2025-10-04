@@ -1,0 +1,64 @@
+### Signup new user
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+  "username": "PrasannaKumar",
+  "email": "prasannakumar2025@gmail.com",
+  "password": "prasannakumar@123"
+}
+
+### Login user
+POST http://localhost:5000/signin
+Content-Type: application/json
+
+{
+  "email": "rahul2025@gmail.com",
+  "password": "rahul@2025"
+}
+
+### Get profile (use token from login response)
+GET http://localhost:5000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTc3OTA1fQ.KofC-Wk4NHrk5TjcKn74WasatfPq3hqx-Me-PC7f05E
+### Update profile
+PUT http://localhost:5000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTc3OTA1fQ.KofC-Wk4NHrk5TjcKn74WasatfPq3hqx-Me-PC7f05E
+Content-Type: application/json
+
+{
+  "username": "abc",
+  "email": "abc2025@gmail.com"
+}
+
+### Get tasks
+GET http://localhost:5000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTc3Njg2fQ.Oga7nAd_VCaDix3dTziJMwTpa4tatcTSl-iEzhXfk5s
+
+### Get tasks by id
+GET http://localhost:5000/tasks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTc3Njg2fQ.Oga7nAd_VCaDix3dTziJMwTpa4tatcTSl-iEzhXfk5s
+
+### Create task
+POST http://localhost:5000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTA5MzU5fQ.9Flu4V5iEjSyXBCD9wdiM0el-2OUf9USb-1CMyiDasI
+Content-Type: application/json
+
+{
+  "title": "Need to Complete Mini Project",
+  "description": "Mini Project is on Covid Dashboard in which A Figma is given. Based on that Figma we need to complete this mini Project. This is mini Project is on MERN Full Stack Development.",
+  "status": "inProgress"
+}
+
+### Update task (replace :id with actual task id)
+PUT http://localhost:5000/tasks/:6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTc3Njg2fQ.Oga7nAd_VCaDix3dTziJMwTpa4tatcTSl-iEzhXfk5s
+
+{
+  "title": "Need to complete SQLite",
+  "description": "I want to update the task using this Update Task Route",
+  "status": "completed"
+}
+
+### Delete task (replace :id with actual task id)
+DELETE http://localhost:5000/tasks/:4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzU5NTA5OTU0fQ.4ZBo45ENJB1rJMpMWZGrTd0mnF5dOaC4YxyPAwa7sYI
