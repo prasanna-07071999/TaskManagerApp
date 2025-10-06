@@ -124,7 +124,7 @@ app.post("/signin", async (request, response) => {
   try{
     if (dbUser === undefined){
         response.status(400)
-        response.send('Invalid User')
+        response.json('Invalid User')
     } else {
         const isPasswordMatched = await bcrypt.compare(password, dbUser.password)
         if(isPasswordMatched === true){
@@ -132,14 +132,14 @@ app.post("/signin", async (request, response) => {
             username: dbUser.username,
         }
         const jwtToken = jwt.sign(payload, "kajjehfxzcjhsdsaxdbsdhd")
-        response.send({jwtToken})
+        response.json({jwtToken})
         } else {
             response.status(401)
-            response.send("Invalid Password")
+            response.json("Invalid Password")
         }
     } 
   } catch(error){
-    return response.status(500).send('Internal Server Error');
+    return response.status(500).json('Internal Server Error');
   }
 })
 
