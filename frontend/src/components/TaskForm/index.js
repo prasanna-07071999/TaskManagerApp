@@ -25,7 +25,7 @@ class TaskForm extends Component {
   fetchTaskDetails = async (id) => {
   this.setState({ loading: true, error: null });
   const token = Cookie.get('jwt_token');
-  const url = `https://taskmanagerapp-th5h.onrender.com/tasks/${id}`;
+  const url = `https://taskmanagerapp-backend-xko3.onrender.com/${id}`;
   const options = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ class TaskForm extends Component {
     e.preventDefault();
     const { id, title, description, status, due_date } = this.state;
     const token = Cookie.get('jwt_token');
-    const url = id ? `https://taskmanagerapp-th5h.onrender.com/tasks/${id}` : 'https://taskmanagerapp-th5h.onrender.com/tasks';
+    const url = id ? `https://taskmanagerapp-backend-xko3.onrender.com/tasks/${id}` : 'https://taskmanagerapp-backend-xko3.onrender.com/tasks';
     const method = id ? 'PUT' : 'POST';
     const options = {
       method,

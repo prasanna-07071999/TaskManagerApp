@@ -16,7 +16,7 @@ class TaskList extends Component {
 
   getTasks = async () => {
     const jwtToken = Cookie.get('jwt_token');
-    const url = 'https://taskmanagerapp-th5h.onrender.com/tasks'
+    const url = 'https://taskmanagerapp-backend-xko3.onrender.com/tasks'
      const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,

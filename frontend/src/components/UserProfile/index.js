@@ -15,7 +15,7 @@ class UserProfile extends Component {
 
   getUserProfile = async () => {
     const jwtToken = Cookie.get('jwt_token');
-    const apiUrl = 'https://taskmanagerapp-th5h.onrender.com/profile'
+    const apiUrl = 'https://taskmanagerapp-backend-xko3.onrender.com/profile'
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
