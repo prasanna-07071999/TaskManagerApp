@@ -37,7 +37,7 @@ class SignUpForm extends Component {
     event.preventDefault()
     const { username, email, password } = this.state
     const userDetails = { username, email, password }
-    const url = "http://localhost:5000/signup"
+    const url = "https://taskmanagerapp-th5h.onrender.com/signup"
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -15,7 +15,7 @@ class UserProfile extends Component {
 
   getUserProfile = async () => {
     const jwtToken = Cookie.get('jwt_token');
-    const apiUrl = 'http://localhost:5000/profile'
+    const apiUrl = 'https://taskmanagerapp-th5h.onrender.com/profile'
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -48,7 +48,7 @@ class UserProfile extends Component {
     const jwttoken = Cookie.get('jwt_token');
     const userDetails = {username, email, createdAt}
     this.setState({ loading: true, message: '', error: null });
-    const url = 'http://localhost:5000/profile'
+    const url = 'https://taskmanagerapp-th5h.onrender.com/profile'
     const options = {
       method: 'PUT',
       body: JSON.stringify(userDetails),
